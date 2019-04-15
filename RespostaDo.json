@@ -1,0 +1,39 @@
+{
+    "status": {
+        "timestamp": "2019-04-15T23:52:53.103Z",
+        "error_code": 0,
+        "error_message": null,
+        "elapsed": 7,
+        "credit_count": 1
+    },
+    "data": {
+        "BTC": {
+            "id": 1,
+            "name": "Bitcoin",
+            "symbol": "BTC",
+            "slug": "bitcoin",
+            "circulating_supply": 17647550,
+            "total_supply": 17647550,
+            "max_supply": 21000000,
+            "date_added": "2013-04-28T00:00:00.000Z",
+            "num_market_pairs": 7257,
+            "tags": [
+                "mineable"
+            ],
+            "platform": null,
+            "cmc_rank": 1,
+            "last_updated": "2019-04-15T23:51:30.000Z",
+            "quote": {
+                "BRL": {
+                    "price": 19619.871391401626,
+                    "volume_24h": 47577786656.84148,
+                    "percent_change_1h": -0.09,
+                    "percent_change_24h": -2.0618,
+                    "percent_change_7d": -3.4436,
+                    "market_cap": 346242661373.3298,
+                    "last_updated": "2019-04-15T23:52:00.000Z"
+                }
+            }
+        }
+    }
+}
