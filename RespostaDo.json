@@ -1,9 +1,9 @@
 {
     "status": {
-        "timestamp": "2019-04-15T23:52:53.103Z",
+        "timestamp": "2019-04-16T00:00:30.574Z",
         "error_code": 0,
         "error_message": null,
-        "elapsed": 7,
+        "elapsed": 6,
         "credit_count": 1
     },
     "data": {
@@ -12,8 +12,8 @@
             "name": "Bitcoin",
             "symbol": "BTC",
             "slug": "bitcoin",
-            "circulating_supply": 17647550,
-            "total_supply": 17647550,
+            "circulating_supply": 17647587,
+            "total_supply": 17647587,
             "max_supply": 21000000,
             "date_added": "2013-04-28T00:00:00.000Z",
             "num_market_pairs": 7257,
@@ -22,16 +22,16 @@
             ],
             "platform": null,
             "cmc_rank": 1,
-            "last_updated": "2019-04-15T23:51:30.000Z",
+            "last_updated": "2019-04-15T23:59:30.000Z",
             "quote": {
                 "BRL": {
-                    "price": 19619.871391401626,
-                    "volume_24h": 47577786656.84148,
-                    "percent_change_1h": -0.09,
-                    "percent_change_24h": -2.0618,
-                    "percent_change_7d": -3.4436,
-                    "market_cap": 346242661373.3298,
-                    "last_updated": "2019-04-15T23:52:00.000Z"
+                    "price": 19617.327410845362,
+                    "volume_24h": 47588957833.433815,
+                    "percent_change_1h": -0.0868,
+                    "percent_change_24h": -2.0931,
+                    "percent_change_7d": -3.4506,
+                    "market_cap": 346198492190.37823,
+                    "last_updated": "2019-04-16T00:00:00.000Z"
                 }
             }
         }
