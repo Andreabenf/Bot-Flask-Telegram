@@ -3,6 +3,7 @@
 from tokens import cmc_token
 import requests
 import json
+import re
 from flask import Flask
 from flask import request
 from flask import Response
@@ -26,12 +27,38 @@ def get_cmc_data(crypto):
     write_json(responser)
     return price
 
+def parse_msg(message):
+        chat_id = message['message']['chat']['id']
+        txt = message['message']['text']
+        pattern =r'/[a-zA-Z]{2,4}'
+        ticker = re.findall(pattern, txt)
+
+        if ticker:
+                symbol = ticker[0][1:].upper()  #Feito o parsing para tirar a / do comando
+        else:
+                symbol = ''
+
+        return chat_id, symbol
+
+def send_message(chat_id,text):
+        url=f'https://api.telegram.org/bot{token_telegram}/sendMessage'
+        payload = {'chat_id': chat_id, 'text': text}
+        r = requests.post(url, json=payload)
+        return r
+
 @app.route('/', methods= ['POST','GET'])
 
 def index():
         if request.method == 'POST':
                 msg = request.get_json()
-                write_json(msg,'telegramjsson')
+                chat_id,symbol = parse_msg(msg)
+                if not symbol:
+                        send_message(chat_id, "Formato de dado errado")
+                        return Response('ok',status=200)
+                      
+                price = get_cmc_data(symbol)
+                send_message(chat_id,price)
+                write_json(msg,'telegramRequest.json')
                 return Response('ok',status=200)
         else:
                 return '<h1> Bot Do Andrezin </h1>'
