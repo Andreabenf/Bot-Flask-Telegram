@@ -64,6 +64,7 @@ def index():
                 return '<h1> Bot Do Andrezin </h1>'
 
 
+# ssh -R 80:localhost:5000 serveo.net
 
 
 
